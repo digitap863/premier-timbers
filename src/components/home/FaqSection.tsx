@@ -59,7 +59,7 @@ function FaqColumn({ items, defaultOpen }: { items: Faq[]; defaultOpen: number }
                             type="button"
                             onClick={() => setOpen(isOpen ? null : i)}
                             aria-expanded={isOpen}
-                            className="flex w-full items-center font-heading justify-between gap-4 px-3 py-[22px] text-left text-xl text-white"
+                            className="flex w-full items-center font-heading justify-between gap-4 px-3 py-[22px] text-left text-xl text-white max-md:gap-3 max-md:px-2 max-md:py-4 max-md:text-base"
                         >
                             <span>{item.question}</span>
                             {isOpen ? (
@@ -74,7 +74,7 @@ function FaqColumn({ items, defaultOpen }: { items: Faq[]; defaultOpen: number }
                                 }`}
                         >
                             <div className="overflow-hidden">
-                                <p className="px-6 pb-8 pt-1 text-[16px] leading-[19px] font-sans text-white">
+                                <p className="px-6 pb-8 pt-1 text-[16px] leading-[19px] font-sans text-white max-md:px-2 max-md:pb-5 max-md:text-[15px] max-md:leading-6">
                                     {item.answer}
                                 </p>
                             </div>
@@ -88,13 +88,13 @@ function FaqColumn({ items, defaultOpen }: { items: Faq[]; defaultOpen: number }
 
 export default function FaqSection() {
     return (
-        <section className="relative bg-white mt-20">
+        <section className="relative bg-white mt-20 max-md:mt-12">
             {/* Green background starts partway down the video */}
-            <div className="absolute inset-x-0 bottom-0 top-[150px] bg-[#384B38]" />
+            <div className="absolute inset-x-0 bottom-0 top-[150px] bg-[#384B38] max-md:top-[110px]" />
 
             <div className="relative mx-auto max-w-[1500px] px-5 py-2 sm:px-10">
                 {/* Video banner */}
-                <div className="relative aspect-[1200/342] min-h-[200px] w-full overflow-hidden rounded-xl">
+                <div className="relative aspect-[1200/342] min-h-[200px] w-full overflow-hidden rounded-xl max-md:min-h-[220px]">
                     <Image
                         src="/home/vid.jpg"
                         alt="Autumn forest path with stacked logs"
@@ -106,14 +106,14 @@ export default function FaqSection() {
                     <button
                         type="button"
                         aria-label="Play video"
-                        className="absolute left-1/2 top-1/2 flex h-[74px] w-[74px] -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-[#384B38] text-white transition-transform hover:scale-105"
+                        className="absolute left-1/2 top-1/2 flex h-[74px] w-[74px] -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-[#384B38] text-white transition-transform hover:scale-105 max-md:h-14 max-md:w-14"
                     >
-                        <FaPlay className="ml-1 h-7 w-7" />
+                        <FaPlay className="ml-1 h-7 w-7 max-md:h-5 max-md:w-5" />
                     </button>
                 </div>
 
                 {/* FAQ columns */}
-                <div className="mt-20 grid gap-x-10 pb-16 md:grid-cols-2">
+                <div className="mt-20 grid gap-x-10 pb-16 md:grid-cols-2 max-md:mt-10 max-md:pb-10">
                     <FaqColumn items={leftFaqs} defaultOpen={2} />
                     <FaqColumn items={rightFaqs} defaultOpen={0} />
                 </div>

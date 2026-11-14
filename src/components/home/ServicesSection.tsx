@@ -40,12 +40,12 @@ const services = [
 export default function ServicesSection() {
     return (
         <section className="bg-[#F5FAF6] px-4 py-10 sm:px-6 lg:px-8 mt-10">
-            <div className="mx-auto max-w-[1500px] px-4">
+            <div className="mx-auto max-w-[1500px] px-4 max-md:px-0">
                 {/* Header */}
-                <p className="text-[18px] font-heading uppercase tracking-wide text-[#384B38]">
+                <p className="text-[18px] font-heading uppercase tracking-wide text-[#384B38] max-md:text-sm">
                     What We Do
                 </p>
-                <h2 className="mt-2 text-4xl font-heading leading-tight tracking-tight text-black sm:text-5xl lg:text-[50px]">
+                <h2 className="mt-2 text-4xl font-heading leading-tight tracking-tight text-black sm:text-5xl lg:text-[50px] max-md:text-[30px] max-md:leading-[1.15]">
                     Responsible forestry &amp; quality timber
                 </h2>
                 <p className="mt-3 max-w-[690px] text-base leading-[22px] text-[#7a7a7a] font-sans">
@@ -59,29 +59,29 @@ export default function ServicesSection() {
                     {services.map((service) => (
                         <article
                             key={service.title}
-                            className="relative flex h-full flex-col overflow-hidden rounded-xl bg-white px-8 pb-8 pt-8"
+                            className="relative flex h-full flex-col overflow-hidden rounded-xl bg-white px-8 pb-8 pt-8 max-md:px-5 max-md:pb-6 max-md:pt-6"
                         >
                             {/* Icon tab */}
-                            <div className="absolute right-10 top-0 flex h-[100px] w-20 items-center justify-center rounded-b-md bg-[#384B38]">
+                            <div className="absolute right-10 top-0 flex h-[100px] w-20 items-center justify-center rounded-b-md bg-[#384B38] max-md:right-5 max-md:h-[72px] max-md:w-16">
                                 <Image
                                     src={service.icon}
                                     alt=""
                                     aria-hidden="true"
                                     width={56}
                                     height={48}
-                                    className="h-12 w-14 object-contain"
+                                    className="h-12 w-14 object-contain max-md:h-10 max-md:w-12"
                                 />
                             </div>
 
                             {/* Number + title */}
-                            <span className="text-[50px] font-heading font-medium leading-none tracking-tight text-[#384B38]">
+                            <span className="text-[50px] font-heading font-medium leading-none tracking-tight text-[#384B38] max-md:text-[40px]">
                                 {service.number}
                             </span>
-                            <h3 className="mt-3 text-[32px] font-heading leading-tight tracking-tighter text-black">
+                            <h3 className="mt-3 text-[32px] font-heading leading-tight tracking-tighter text-black max-md:text-[26px]">
                                 {service.title}
                             </h3>
 
-                            <p className="mt-3 text-lg font-heading text-black">
+                            <p className="mt-3 text-lg font-heading text-black max-md:text-base">
                                 {service.subtitle}
                             </p>
 
@@ -102,7 +102,7 @@ export default function ServicesSection() {
 
                             <Link
                                 href={service.href}
-                                className="mt-6 flex h-[50px] font-heading items-center justify-center rounded-sm bg-[#384B38] text-sm font-semibold uppercase tracking-wide text-white transition-colors hover:bg-[#2c3c2c]"
+                                className="mt-6 flex h-[50px] font-heading items-center justify-center rounded-sm bg-[#384B38] text-sm font-semibold uppercase tracking-wide text-white transition-colors hover:bg-[#2c3c2c] max-md:h-12"
                             >
                                 Discover More
                             </Link>

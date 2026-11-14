@@ -13,10 +13,10 @@ type AboutProp = {
 }
 export default function AboutSection({ isPadding }: AboutProp) {
     return (
-        <section className={`bg-white px-5 pb-12  sm:px-8 md:px-12 lg:pb-16 ${isPadding ? "pt-20 lg:pt-60" : " pt-12"}`}>
+        <section className={`bg-white px-5 pb-12  sm:px-8 md:px-12 lg:pb-16 ${isPadding ? "pt-5 md:pt-60" : " pt-12"}`}>
             <div className="mx-auto grid max-w-[1500px] gap-12 lg:grid-cols-2 lg:gap-16">
                 {/* LEFT */}
-                <div className="flex flex-col justify-between gap-10">
+                <div className="flex flex-col justify-between gap-10 max-md:gap-6">
                     <div className="relative aspect-[753/424] w-full overflow-hidden rounded-2xl">
                         <Image
                             src="/home/about1.jpg"
@@ -28,13 +28,13 @@ export default function AboutSection({ isPadding }: AboutProp) {
                         />
                     </div>
 
-                    <div className="grid grid-cols-3 gap-4">
+                    <div className="grid grid-cols-3 gap-4 max-sm:gap-2">
                         {stats.map((stat) => (
                             <div key={stat.label} className="flex flex-col">
-                                <span className="text-5xl font-medium font-heading leading-none tracking-tighter text-[#384B38] sm:text-6xl xl:text-[88px]">
+                                <span className="text-5xl font-medium font-heading leading-none tracking-tighter text-[#384B38] sm:text-6xl xl:text-[88px] max-sm:text-[34px]">
                                     {stat.value}
                                 </span>
-                                <span className="mt-3 font-sans text-sm text-black sm:text-base">
+                                <span className="mt-3 font-sans text-sm text-black sm:text-base max-sm:mt-2 max-sm:text-xs">
                                     {stat.label}
                                 </span>
                             </div>
@@ -44,19 +44,19 @@ export default function AboutSection({ isPadding }: AboutProp) {
 
                 {/* RIGHT */}
                 <div className="flex flex-col">
-                    <p className="text-lg uppercase font-heading tracking-wide text-[#384B38]">
+                    <p className="text-lg uppercase font-heading tracking-wide text-[#384B38] max-md:text-sm">
                         About Us
                     </p>
 
-                    <h2 className="mt-3 text-4xl font-heading  leading-[1.05] tracking-tight text-black sm:text-5xl xl:text-[50px]">
+                    <h2 className="mt-3 text-4xl font-heading  leading-[1.05] tracking-tight text-black sm:text-5xl xl:text-[50px] max-sm:text-[30px] max-sm:leading-[1.15]">
                         Where Quality Timber Meets Six Decades of Craftsmanship
                     </h2>
 
-                    <p className="mt-4 max-w-[740px] font-sans text-base leading-[25px] text-[#7a7a7a]">
+                    <p className="mt-4 max-w-[740px] font-sans text-base leading-[25px] text-[#7a7a7a] max-md:leading-6">
                         For 64 years, Premier Timbers has been a trusted name in the manufacture and export of timber, delivering the highest quality raw wood and services. From timber seasoning and treatment to sawing, planing, carpentry and joinery, we handle every stage with skill and care. Our reputation has spread far, and we have proudly served homes and businesses across the state.
                     </p>
 
-                    <div className="relative mt-4 aspect-[754/225] w-full overflow-hidden rounded-2xl">
+                    <div className="relative mt-4 aspect-[754/225] w-full overflow-hidden rounded-2xl max-md:aspect-[16/9]">
                         <Image
                             src="/home/about2.jpg"
                             alt="Timber crane loading logs onto a truck in a forest"
@@ -66,17 +66,17 @@ export default function AboutSection({ isPadding }: AboutProp) {
                         />
                     </div>
 
-                    <div className="mt-10 flex flex-wrap items-center gap-8 lg:mt-auto lg:pt-16">
+                    <div className="mt-10 flex flex-wrap items-center gap-8 lg:mt-auto lg:pt-16 max-md:mt-6 max-md:gap-3">
                         <Link
                             href={"#"}
-                            className="inline-flex items-center gap-3 rounded-md border border-white bg-[#384b38] px-8 py-4 text-sm font-medium font-heading text-white shadow-lg  max-md:justify-center max-md:text-xs"
+                            className="inline-flex items-center gap-3 rounded-md border border-white bg-[#384b38] px-8 py-4 text-sm font-medium font-heading text-white shadow-lg  max-md:justify-center max-md:whitespace-nowrap max-md:px-4 max-md:py-3 max-md:text-xs"
                         >
                             DISCOVER MORE
                         </Link>
 
-                        <div className="flex items-center gap-4">
-                            <div className="h-14 w-14 bg-[#384b38] rounded-full flex justify-center items-center"><PhoneCall className="h-6 w-6 text-white" /></div>
-                            <span className="text-lg">Call The Branch<br /><span className="text-xl text-[#384b38]">+917736736728</span></span>
+                        <div className="flex items-center gap-4 max-md:gap-2">
+                            <div className="h-14 w-14 bg-[#384b38] rounded-full flex justify-center items-center max-md:h-10 max-md:w-10 max-md:shrink-0"><PhoneCall className="h-6 w-6 text-white max-md:h-5 max-md:w-5" /></div>
+                            <span className="text-lg max-md:text-sm">Call The Branch<br /><span className="text-xl text-[#384b38] max-md:text-[15px]">+917736736728</span></span>
                         </div>
                     </div>
                 </div>
