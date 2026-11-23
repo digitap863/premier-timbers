@@ -7,8 +7,6 @@ import { FaPlay } from "react-icons/fa";
 
 type Faq = { question: string; answer: string };
 
-const answer =
-    "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast";
 
 const leftFaqs: Faq[] = [
     {

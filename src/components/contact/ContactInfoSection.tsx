@@ -60,39 +60,39 @@ const cards: InfoCard[] = [
 const ContactInfoSection = () => {
     return (
         <section className="bg-[#F5FAF6] px-4 py-10 sm:px-6 lg:px-8 mt-10">
-            <div className="mx-auto max-w-[1500px] px-4">
+            <div className="mx-auto max-w-[1500px] px-4 max-md:px-0">
                 {/* Header */}
-                <p className="text-[18px] font-heading uppercase tracking-wide text-[#384B38]">
+                <p className="text-[18px] font-heading uppercase tracking-wide text-[#384B38] max-md:text-sm">
                     Contact Us
                 </p>
 
                 {/* Cards */}
-                <div className="mt-8 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+                <div className="mt-8 grid gap-5 md:grid-cols-2 xl:grid-cols-4 max-md:mt-6">
                     {cards.map(({ title, subtitle, icon: Icon, items }, index) => (
                         <article
                             key={title}
-                            className="relative flex flex-col overflow-hidden rounded-xl bg-white px-8 pb-8 pt-8"
+                            className="relative flex flex-col overflow-hidden rounded-xl bg-white px-8 pb-8 pt-8 max-md:px-5 max-md:pb-6 max-md:pt-6"
                         >
                             {/* Icon tab */}
-                            <div className="absolute right-10 top-0 flex h-[100px] w-20 items-center justify-center rounded-b-md bg-[#384B38] text-white">
-                                <Icon className="h-7 w-7" />
+                            <div className="absolute right-10 top-0 flex h-[100px] w-20 items-center justify-center rounded-b-md bg-[#384B38] text-white max-md:right-5 max-md:h-[72px] max-md:w-16">
+                                <Icon className="h-7 w-7 max-md:h-6 max-md:w-6" />
                             </div>
 
                             {/* Number + title */}
-                            <span className="text-[50px] font-heading font-medium leading-none tracking-tight text-[#384B38]">
+                            <span className="text-[50px] font-heading font-medium leading-none tracking-tight text-[#384B38] max-md:text-[40px]">
                                 {String(index + 1).padStart(2, "0")}.
                             </span>
-                            <h3 className="mt-3 text-[32px] font-heading leading-tight tracking-tighter text-black">
+                            <h3 className="mt-3 text-[32px] font-heading leading-tight tracking-tighter text-black max-md:text-[26px]">
                                 {title}
                             </h3>
 
-                            <p className="mt-3 text-lg font-heading text-black">
+                            <p className="mt-3 text-lg font-heading text-black max-md:text-base">
                                 {subtitle}
                             </p>
 
-                            <hr className="mt-5 border-t border-[#384B38]/25" />
+                            <hr className="mt-5 border-t border-[#384B38]/25 max-md:mt-4" />
 
-                            <ul className="mt-5 space-y-4">
+                            <ul className="mt-5 space-y-4 max-md:mt-4 max-md:space-y-3">
                                 {items.map((item) => (
                                     <li
                                         key={item.label}

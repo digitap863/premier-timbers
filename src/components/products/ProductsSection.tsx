@@ -25,21 +25,21 @@ const categories: Category[] = [
         title: "Hard Wood",
         subtitle: "Strong, dense and long-lasting timber",
         products: [
-            { name: "Teak", image: "/products/teak.webp", description: "A classic hardwood choice for furniture, doors, and fine joinery." },
-            { name: "Rose Wood", image: "/products/rose-wood.webp", description: "Known for its rich appearance, rose wood brings character to statement furniture and decorative interiors." },
-            { name: "Sal", image: "/products/sal.webp", description: "A sturdy timber option often selected for robust construction and demanding carpentry." },
-            { name: "Merbau/Kwila", image: "/products/merbau-kwila.webp", description: "A richly toned hardwood suited to durable flooring, decking, and substantial joinery." },
-            { name: "Babool", image: "/products/babool.webp", description: "A traditional hardwood for practical furniture, general carpentry, and everyday woodwork." },
-            { name: "Pyinkado", image: "/products/pyinkado.webp", description: "A dense tropical timber valued for strong flooring, furniture, and construction work." },
-            { name: "Green Heart", image: "/products/green-heart.webp", description: "A particularly dense hardwood selected for heavy-duty outdoor and marine applications." },
-            { name: "Tatabu", image: "/products/tatabu.webp", description: "A durable tropical wood option for robust joinery, flooring, and building projects." },
-            { name: "WPL", image: "/products/WPL.webp", description: "A distinctive hardwood selection; ask us about its specifications and recommended applications." },
-            { name: "Cedar", image: "/products/Cedar.webp", description: "A lightweight, aromatic wood often chosen for interior lining, storage, and decorative joinery." },
+            { name: "Teak", image: "/products/teak.jpg", description: "A classic hardwood choice for furniture, doors, and fine joinery." },
+            { name: "Rose Wood", image: "/products/rose-wood.jpg", description: "Known for its rich appearance, rose wood brings character to statement furniture and decorative interiors." },
+            { name: "Sal", image: "/products/sal.jpg", description: "A sturdy timber option often selected for robust construction and demanding carpentry." },
+            { name: "Merbau/Kwila", image: "/products/merbau-kwila.jpg", description: "A richly toned hardwood suited to durable flooring, decking, and substantial joinery." },
+            { name: "Babool", image: "/products/babool.jpg", description: "A traditional hardwood for practical furniture, general carpentry, and everyday woodwork." },
+            { name: "Pyinkado", image: "/products/pyinkado.jpg", description: "A dense tropical timber valued for strong flooring, furniture, and construction work." },
+            { name: "Green Heart", image: "/products/green-heart.jpg", description: "A particularly dense hardwood selected for heavy-duty outdoor and marine applications." },
+            { name: "Tatabu", image: "/products/tatabu.jpg", description: "A durable tropical wood option for robust joinery, flooring, and building projects." },
+            { name: "WPL", image: "/products/WPL.jpg", description: "A distinctive hardwood selection; ask us about its specifications and recommended applications." },
+            { name: "Cedar", image: "/products/Cedar.jpg", description: "A lightweight, aromatic wood often chosen for interior lining, storage, and decorative joinery." },
             { name: "Violet", image: "/products/Violet.webp", description: "A distinctive timber choice for adding color and visual interest to custom furniture and interiors." },
-            { name: "Padok", image: "/products/Padok.webp", description: "A richly colored hardwood option for decorative furniture, flooring, and detailed joinery." },
-            { name: "Anjily", image: "/products/Anjily.webp", description: "A regional hardwood suitable for sturdy carpentry, furniture, and general construction needs." },
-            { name: "Mahogany", image: "/products/Mahogany.webp", description: "Its attractive grain makes mahogany a popular choice for furniture, doors, and interior trim." },
-            { name: "Acacia", image: "/products/Acacia.webp", description: "A versatile hardwood with expressive grain, used for furniture, flooring, and general joinery." },
+            { name: "Padok", image: "/products/Padok.jpg", description: "A richly colored hardwood option for decorative furniture, flooring, and detailed joinery." },
+            { name: "Anjily", image: "/products/Anjily.avif", description: "A regional hardwood suitable for sturdy carpentry, furniture, and general construction needs." },
+            { name: "Mahogany", image: "/products/Mahogany.jpg", description: "Its attractive grain makes mahogany a popular choice for furniture, doors, and interior trim." },
+            { name: "Acacia", image: "/products/Acacia.jpg", description: "A versatile hardwood with expressive grain, used for furniture, flooring, and general joinery." },
         ],
     },
     {
@@ -103,37 +103,37 @@ const Products = () => {
 
     return (
         <section className="bg-[#F5FAF6] px-4 py-10 sm:px-6 lg:px-8 mt-10">
-            <div className="mx-auto max-w-[1500px] px-4">
+            <div className="mx-auto max-w-[1500px] px-4 max-md:px-0">
                 {/* Header */}
-                <p className="text-[18px] font-heading uppercase tracking-wide text-[#384B38]">
+                <p className="text-[18px] font-heading uppercase tracking-wide text-[#384B38] max-md:text-sm">
                     Our Products
                 </p>
-                <h2 className="mt-2 text-4xl font-heading leading-tight tracking-tight text-black sm:text-5xl lg:text-[50px]">
+                <h2 className="mt-2 text-4xl font-heading leading-tight tracking-tight text-black sm:text-5xl lg:text-[50px] max-md:text-[30px] max-md:leading-[1.15]">
                     Quality timber for every project
                 </h2>
 
                 {/* Categories */}
-                <div className="mt-12 space-y-14">
+                <div className="mt-12 space-y-14 max-md:mt-8 max-md:space-y-10">
                     {categories.map((category) => (
                         <div key={category.title}>
                             {/* Category heading */}
                             <div className="flex items-end gap-4">
                                 <div className="pb-1">
-                                    <h3 className="text-[32px] font-heading leading-tight tracking-tighter text-black">
+                                    <h3 className="text-[32px] font-heading leading-tight tracking-tighter text-black max-md:text-[26px]">
                                         {category.title}
                                     </h3>
-                                    <p className="text-lg font-heading text-[#7a7a7a]">
+                                    <p className="text-lg font-heading text-[#7a7a7a] max-md:text-base">
                                         {category.subtitle}
                                     </p>
                                 </div>
                             </div>
 
                             {/* Product cards */}
-                            <div className="mt-6 grid grid-cols-2 gap-5 md:grid-cols-3 lg:grid-cols-4">
+                            <div className="mt-6 grid grid-cols-2 gap-5 md:grid-cols-3 lg:grid-cols-4 max-md:mt-4 max-md:gap-3">
                                 {category.products.map((product) => (
                                     <article
                                         key={`${category.title}-${product.name}`}
-                                        className="overflow-hidden rounded-xl bg-white p-4 sm:p-5"
+                                        className="overflow-hidden rounded-xl bg-white p-4 sm:p-5 max-sm:p-3"
                                     >
                                         <button
                                             type="button"
@@ -155,7 +155,7 @@ const Products = () => {
                                                 />
                                             </span>
 
-                                            <span className="mt-4 text-xl font-heading leading-tight tracking-tight text-black sm:text-2xl">
+                                            <span className="mt-4 text-xl font-heading leading-tight tracking-tight text-black sm:text-2xl max-sm:mt-3 max-sm:break-words max-sm:text-base">
                                                 {product.name}
                                             </span>
                                         </button>
@@ -180,7 +180,7 @@ const Products = () => {
                 className="m-auto max-h-[90vh] w-[calc(100%-2rem)] max-w-lg overflow-y-auto rounded-2xl border-0 bg-white p-0 text-left shadow-2xl backdrop:bg-black/60"
             >
                 {selectedProduct && (
-                    <div className="p-5 sm:p-6">
+                    <div className="p-5 sm:p-6 max-sm:p-4">
                         <div className="relative aspect-[402/260] w-full overflow-hidden rounded-xl bg-neutral-200">
                             <Image
                                 src={selectedProduct.product.image}
@@ -190,19 +190,19 @@ const Products = () => {
                                 className="object-cover"
                             />
                         </div>
-                        <div className="mt-5 flex items-start justify-between gap-4">
+                        <div className="mt-5 flex items-start justify-between gap-4 max-sm:mt-4 max-sm:gap-2">
                             <div>
-                                <h3 id="product-dialog-title" className="text-2xl font-heading text-black">
+                                <h3 id="product-dialog-title" className="text-2xl font-heading text-black max-sm:text-xl">
                                     {selectedProduct.product.name}
                                 </h3>
-                                <p id="product-dialog-description" className="mt-2 text-base leading-relaxed text-[#626262]">
+                                <p id="product-dialog-description" className="mt-2 text-base leading-relaxed text-[#626262] max-sm:text-[15px]">
                                     {selectedProduct.product.description}
                                 </p>
                             </div>
                             <button
                                 type="button"
                                 onClick={() => dialogRef.current?.close()}
-                                className="shrink-0 rounded-full px-3 py-1 text-sm font-medium text-[#384B38] hover:bg-[#F5FAF6] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#384B38]"
+                                className="shrink-0 rounded-full px-3 py-1 text-sm font-medium text-[#384B38] hover:bg-[#F5FAF6] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#384B38] max-sm:px-2"
                                 aria-label="Close product details"
                                 autoFocus
                             >
