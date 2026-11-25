@@ -3,10 +3,10 @@ import Image from "next/image";
 import Link from "next/link";
 
 const services = [
-    { title: "Wood Seasoning", icon: "/home/icon1.png", description: "Premier Timbers dries wood to remove moisture, giving you strong, durable, high-quality timber." },
-    { title: "Wood Treatment", icon: "/home/icon3.png", description: "At Premier Timbers, we use professional methods to protect and preserve timber from damage." },
-    { title: "Saw Mill", icon: "/home/icon2.png", description: "Our modern sawmills and skilled workers cut logs to size for maximum yield." },
-    { title: "Carpentery/Joinery", icon: "/home/icon4.png", description: "Our bespoke joinery and carpentry services range from simple repairs to fully fitted offices and kitchens." },
+    { title: "Wood Seasoning", icon: "/home/i1.png", description: "Premier Timbers dries wood to remove moisture, giving you strong, durable, high-quality timber." },
+    { title: "Wood Treatment", icon: "/home/i2.png", description: "At Premier Timbers, we use professional methods to protect and preserve timber from damage." },
+    { title: "Saw Mill", icon: "/home/i3.png", description: "Our modern sawmills and skilled workers cut logs to size for maximum yield." },
+    { title: "Carpentery/Joinery", icon: "/home/i4.png", description: "Our bespoke joinery and carpentry services range from simple repairs to fully fitted offices and kitchens." },
 ];
 
 function Banner() {
@@ -14,7 +14,7 @@ function Banner() {
         <section className="relative isolate min-h-screen max-md:min-h-0">
             {/* Desktop background (full-screen) - hidden on mobile */}
             <div className="absolute inset-0 max-md:hidden">
-                <div className="inset-0 bg-black/40 absolute z-10"></div>
+                <div className="inset-0 bg-black/55 absolute z-10"></div>
                 <Image src={"/home/banner1.jpg"} fill alt="Banner" className="" />
             </div>
 
@@ -35,18 +35,20 @@ function Banner() {
                     </div>
 
                     <div className="mb-3 flex items-center gap-1.5 text-white/75 max-md:justify-center">
-                        <span className="text-[18px] uppercase tracking-wide font-heading max-md:text-xs">
-                            WOOD PRUDCTION
+                        <span className="text-[18px] italic tracking-wide font-heading max-md:text-xs">
+                            Wood Manufacturers and Distributors
                         </span>
                     </div>
 
                     <h1 className="text-3xl  leading-19 font-heading tracking-tight text-white sm:text-[76px] max-md:text-[28px] max-md:leading-[1.15]">
-                        Undisputed leaders in
-                        timber<br className="max-md:hidden" /> manufacturing
-                        and trading</h1>
+                        Premier Timbers
+                    </h1>
+                    <h2 className="mt-3 text-[28px] font-heading leading-[1.15] tracking-tight text-white sm:text-[30px] max-md:mt-2 max-md:text-[22px]">
+                         Premium Lumber | Precision Milled | The Sustainable Choice
+                    </h2>
 
                     <p className="mt-3 max-w-[700px] font-sans text-[11px] leading-[1.45] text-white/75 sm:text-base max-md:text-sm max-md:leading-6 max-md:text-white/85">
-                        We&apos;re an ISO 9001:2015 certified company based in Kerala involved into sales and manufacture of timbers and plywood since six decade
+                        An ISO 9001:2015 certified enterprise based in Kerala, manufacturing and directly importing premium timber and plywood since 1956
                     </p>
 
                     {/* CTA buttons */}
@@ -60,11 +62,11 @@ function Banner() {
                         </Link>
 
                         <a
-                            href="tel:+919847044288"
+                            href="tel:+917736736728"
                             className="inline-flex items-center gap-3  text-xl font-heading font-medium text-white transition  max-md:gap-2 max-md:text-xs"
                         >
                             <div className="h-12 w-12 bg-white rounded-full flex justify-center items-center max-md:h-9 max-md:w-9 max-md:shrink-0"><PhoneCall className="h-6 w-6 text-black/40 max-md:h-4 max-md:w-4" /></div>
-                            <span className="max-md:text-left">Call The Branch<br />+919847044288</span>
+                            <span className="max-md:text-left">Call The Branch<br />+91 7736736728</span>
                         </a>
                     </div>
                 </div>

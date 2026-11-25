@@ -1,41 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
+import { services as allServices } from "@/data/services";
 
-const services = [
-    {
-        number: "01.",
-        title: "Wood Seasoning",
-        subtitle: "Controlled drying for durable timber",
-        icon: "/home/icon1.png",
-        image: "/services/s1.jpg",
-        imageAlt: "Stacked timber being loaded into a drying chamber",
-        description:
-            "We dry timber to remove moisture, giving you strong, durable and high-quality wood.",
-        href: "/services/wood-seasoning",
-    },
-    {
-        number: "02.",
-        title: "Wood Treatment",
-        subtitle: "Protection against damage and decay",
-        icon: "/home/icon2.png",
-        image: "/services/s2.jpg",
-        imageAlt: "Timber loaded into a pressure treatment cylinder",
-        description:
-            "We use professional methods to preserve and protect timber from damage and keep it lasting longer.",
-        href: "/services/wood-treatment",
-    },
-    {
-        number: "03.",
-        title: "Saw Mill",
-        subtitle: "Precision cutting for maximum yield",
-        icon: "/home/icon3.png",
-        image: "/services/s3.jpg",
-        imageAlt: "Workers cutting logs at a sawmill",
-        description:
-            "Our modern sawmills and skilled workers cut logs to the required sizes for maximum yield.",
-        href: "/services/saw-mill",
-    },
-];
+const services = allServices.slice(0, 3);
 
 export default function ServicesSection() {
     return (
